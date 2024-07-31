@@ -1,0 +1,85 @@
+
+
+.testimonial__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Carousel Styles */
+.carousel .slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .slider-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* Adjust slide item margins */
+.carousel .slide .testimonial__item {
+    background: var(--color-bg-variant);
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    margin: 0 auto; /* Reduced margin */
+    max-width: 90%;
+    flex: 0 0 auto;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+
+.carousel .slide:hover .testimonial__item {
+    border-color: var(--color-primary-variant);
+    background: transparent;
+}
+
+.testimonial__item-image {
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.testimonial__item-image img {
+    width: 100%;
+    height: auto;
+}
+
+.testimonial__item h3 {
+    margin: 1rem 0 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+
+
+/************************************************ MEDIA QUERIES (LARGE DEVICES) ***************************************/
+
+@media screen and (min-width: 769px) {
+    .carousel .slide .testimonial__item {
+        max-width: 100%;
+         /* Margin for larger screens */
+    }
+}
+
+/************************************************ MEDIA QUERIES (MEDIUM DEVICES) ***************************************/
+
+@media screen and (max-width: 1024px) {
+    .carousel .slide .testimonial__item {
+        max-width: 100%px;
+         /* Reduced margin for medium screens */
+    }
+}
+
+/************************************************ MEDIA QUERIES (SMALL DEVICES) ***************************************/
+
+@media screen and (max-width: 600px) {  
+    .carousel .slide .testimonial__item {
+        max-width: 100%;
+        margin: 0 0rem; 
+    }
+}

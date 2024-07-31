@@ -1,0 +1,111 @@
+/* Main coding section styling */
+.coding-section {
+    text-align: center;
+    padding: 2rem;
+    width: var(--container-width-lg); 
+    margin: 4rem auto 0 auto; 
+    overflow-x: hidden; 
+}
+
+/* Container for coding items */
+.coding-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; 
+    justify-content: center;
+    overflow-x: hidden; 
+}
+
+/* Individual coding items */
+.coding-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-light);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    padding: 1.5rem; 
+    border-radius: 12px; 
+    background-color: var(--color-bg-variant); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+    max-width: 100%; 
+    box-sizing: border-box; 
+    height: 200px;
+    position: relative; 
+    overflow: hidden; 
+    flex: 1 1 200px; /* Ensure the item grows and shrinks with the container */
+}
+
+/* Hover effects */
+.coding-item:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+}
+
+.coding-logo {
+    width: 85px;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+
+
+.coding-item:hover .coding-logo {
+    transform: rotate(-10deg); 
+    transition: transform 0.3s ease;
+}
+
+.coding-name {
+    font-size: 1rem; 
+    color: var(--color-light);
+    margin-top: auto; 
+    text-align: center;
+}
+
+/* Media queries */
+@media screen and (max-width: 1024px) {
+    .coding-section {
+        width: var(--container-width-md); 
+        margin-bottom: 0; 
+    }
+
+    .coding-container {
+        gap: 1rem; 
+    }
+
+    .coding-item {
+        padding: 1.25rem; 
+    }
+
+    .coding-name {
+        font-size: 0.9rem; 
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .coding-section {
+        width: var(--container-width-sm); 
+        padding: 1rem;
+        margin-bottom: 0; 
+        overflow-x: hidden; 
+    }
+
+    .coding-container {
+        gap: 0.75rem; 
+    }
+
+    .coding-item {
+        padding: 1rem; 
+        height: 180px; /* Set a consistent height for small screens */
+        flex: 1 1 180px; /* Ensure the item grows and shrinks with the container */
+    }
+
+    .coding-logo {
+        width: 60px; 
+    }
+
+    .coding-name {
+        font-size: 0.8rem; 
+    }
+}
